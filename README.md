@@ -1,4 +1,4 @@
-# Black and White Restaurant 🍽️
+# "Black and White" Restaurant 🍽️
 
 Welcome to the **Black and White Restaurant** project! This is an online restaurant platform that allows users to browse food categories, view menus, place orders, and manage their accounts.
 
