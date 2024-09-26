@@ -1,3 +1,29 @@
+<?php 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $address = $_POST['address'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $repeat_password = $_POST['repeat_password'];
+
+    if ($password === $repeat_password) {
+        $data = $firstname . "," . $lastname . "," . $address . "," . $phone . "," . $email . "," . password_hash($password, PASSWORD_DEFAULT) . "\n";
+
+        $file = fopen("users_data.txt", "a");
+        fwrite($file, $data);
+        fclose($file);
+
+        echo "Registration successful";
+    } else {
+        echo "Passwords dont match";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
