@@ -2,28 +2,24 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $file = fopen("users_data.txt", "r");
-    $found = false;
-
-    while (($line = fgets($file)) !== false) {
-        list($firstname, $lastname, $address, $phone, $stored_email, $stored_password) = explode(",", trim($line));
-        
-        if ($stored_email === $email && password_verify($password, $stored_password)) {
-            $_SESSION['user_email'] = $stored_email; 
-            $found = true;
-            break;
-        }
-    }
-    fclose($file);
-
-    if ($found) {
-        header("Location: index.php"); 
-        exit();
+    
+    if (empty($_POST['email']) || empty($_POST['password'])) {
+        $error = "Both fields are required!";
     } else {
-        $error_message = "Invalid email or password."; 
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $lines = file("users_data.txt");
+        foreach ($lines as $line) {
+            list($firstname, $lastname, $address, $phone, $emailStored, $passwordHash) = explode(",", trim($line));
+            if ($email === $emailStored && password_verify($password, $passwordHash)) {
+                
+                $_SESSION['email'] = $email;
+                header("Location: index.php"); 
+                exit;
+            }
+        }
+        $error = "Invalid email or password!";
     }
 }
 ?>
@@ -45,6 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2>Sign In</h2>
             </div>
             <div class="card-body">
+                <!-- Error message -->
+                <?php if (isset($error)) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
+
                 <form action="signin.php" method="POST">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
@@ -66,8 +65,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
             </div>    
         </div>
-            
+        
+        <!-- Validation -->
+        <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
 
+                if (!email || !password) {
+                    alert('Both fields are required!');
+                    event.preventDefault(); 
+                }
+            });
+        </script>
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
