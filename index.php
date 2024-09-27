@@ -15,13 +15,30 @@
     </head>
     <body>
         <header>
-            jubnijbd w
+            <div class="container">
+                <div class="navbar d-flex">
+                    <div class="navbar-item logo">
+                        <a href="index.php" title="Logo">
+                            <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <ul class="menu d-flex justify-content-between">
+                            <li class="navbar-list-item"><a href="#">Home</a></li>
+                            <li class="navbar-list-item"><a href="#">Categories</a></li>
+                            <li class="navbar-list-item"><a href="#">Menu</a></li>
+                            <li class="navbar-list-item"><a href="#">Contact</a></li>
+                            <li class="navbar-list-item"><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
         <main>
-            nwodjno
+            
         </main>
         <footer>
-            nijunewo
+            
         </footer>
         
 
