@@ -4,6 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Sign In*/
 body {
     background-color: #000;
     font-family: Arial, sans-serif; 
@@ -29,7 +30,7 @@ body {
 .form-control {
     background-color: #333; 
     color: #fff; 
-    border: 1px solid #444; 
+    border-color: #444; 
     border-radius: 5px; 
 }
 .form-control:focus {
