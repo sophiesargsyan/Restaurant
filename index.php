@@ -35,7 +35,9 @@
             </div>
         </header>
         <main>
-            <div class="container">
+            <!-- Categories  -->
+            <div class="container ">
+                <h2 class="text-center subheadings">Explore Categories</h2>
                 <div id="carouselExampleIndicators" class="categories carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -62,6 +64,112 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+            </div>
+            <!-- Order Menu  -->
+            <div class="food-menu">
+                <div class="container">
+                    <h2 class="text-center">Food Menu</h2>
+                    <div class="d-flex order-card">
+                        <div class="food-menu-box">
+                            <div class="food-menu-img">
+                                <img src="images/food-1.jpg" alt="Fish Salad" class="img-responsive img-curve">
+                            </div>
+                
+                            <div class="food-menu-desc">
+                                <h4>Greek Fish Salad</h4>
+                                <p class="food-price">$2.3</p>
+                                <p class="food-detail">
+                                    Made with Italian Sauce, Chicken, and organice vegetables.
+                                </p>
+                                <br>
+                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="food-menu-box">
+                            <div class="food-menu-img">
+                                <img src="images/food-2.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                            </div>
+                
+                            <div class="food-menu-desc">
+                                <h4>Fried Chicken Wings</h4>
+                                <p class="food-price">$2.3</p>
+                                <p class="food-detail">
+                                    Made with Italian Sauce, Chicken, and organice vegetables.
+                                </p>
+                                <br>
+                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="d-flex order-card">
+                        <div class="food-menu-box">
+                            <div class="food-menu-img">
+                                <img src="images/food-3.jpg" alt="Chicke Hawain Burger" class="img-responsive img-curve">
+                            </div>
+                
+                            <div class="food-menu-desc">
+                                <h4>Kothu Parottas</h4>
+                                <p class="food-price">$2.3</p>
+                                <p class="food-detail">
+                                    Made with Italian Sauce, Chicken, and organice vegetables.
+                                </p>
+                                <br>
+                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="food-menu-box">
+                            <div class="food-menu-img">
+                                <img src="images/food-4.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                            </div>
+                
+                            <div class="food-menu-desc">
+                                <h4>Murgh Shahi Korma</h4>
+                                <p class="food-price">$2.3</p>
+                                <p class="food-detail">
+                                    Made with Italian Sauce, Chicken, and organice vegetables.
+                                </p>
+                                <br>
+                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex order-card">
+                        <div class="food-menu-box">
+                            <div class="food-menu-img">
+                                <img src="images/food-5.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                            </div>
+                
+                            <div class="food-menu-desc">
+                                <h4>Teriyaki Chicken</h4>
+                                <p class="food-price">$2.3</p>
+                                <p class="food-detail">
+                                    Made with Italian Sauce, Chicken, and organice vegetables.
+                                </p>
+                                <br>
+                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                            </div>
+                        </div>
+                
+                        <div class="food-menu-box">
+                            <div class="food-menu-img">
+                                <img src="images/food-6.jpg" alt="Chicke Hawain Momo" class="img-responsive img-curve">
+                            </div>
+                
+                            <div class="food-menu-desc">
+                                <h4>Prawn Jambalaya</h4>
+                                <p class="food-price">$2.3</p>
+                                <p class="food-detail">
+                                    Made with Italian Sauce, Chicken, and organice vegetables.
+                                </p>
+                                <br>
+                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="#" style="color: black;">See All Foods</a>
+                </p>
             </div>
         </main>
         <footer>
