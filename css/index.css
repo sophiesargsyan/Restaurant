@@ -9,6 +9,7 @@ body {
     color: white;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -55,28 +56,24 @@ body {
     float: left;
 }
 
+/* Categories */
 .categories{
     margin-left: 15%;
     margin-right: 15%;
     padding-bottom: 5%;
 }
 
-.order-menu {
-    padding-top: 15%;
-    background-color: white;
-    color: black;
-}
-
+/* Food Menu */
 .order-card{
     padding-left: 9%;
 }
 
-/* CSS for Food Menu */
 .food-menu{
     background-color: #ececec;
     color: black;
     padding: 4% 0;
 }
+
 .food-menu-box{
     width: 43%;
     margin: 1%;
@@ -106,7 +103,20 @@ body {
     color: #747d8c;
 }
 
+.order-button{
+    background-color:#181b1e; 
+    color:white;
+}
 
+.order-button{
+    background-color:#181b1e; 
+    color:white;
+}
+
+.order-button:hover{
+    background-color:white; 
+    color:#181b1e;
+}
 
 @media (max-width: 600px) {
     .navbar {
@@ -132,4 +142,9 @@ body {
         margin-left: 0%;
         margin-right: 0%;
     }
+
+    .order-card{
+        
+    }
+    
 }

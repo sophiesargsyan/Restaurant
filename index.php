@@ -36,8 +36,8 @@
         </header>
         <main>
             <!-- Categories  -->
-            <div class="container ">
-                <h2 class="text-center subheadings">Explore Categories</h2>
+            <div class="container">
+                <h2 class="text-center">Explore Categories</h2>
                 <div id="carouselExampleIndicators" class="categories carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -82,7 +82,7 @@
                                     Made with Italian Sauce, Chicken, and organice vegetables.
                                 </p>
                                 <br>
-                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                                <a href="order.html" class="order-button btn">Order Now</a>
                             </div>
                         </div>
                         <div class="food-menu-box">
@@ -97,7 +97,7 @@
                                     Made with Italian Sauce, Chicken, and organice vegetables.
                                 </p>
                                 <br>
-                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                                <a href="order.html" class="order-button btn">Order Now</a>
                             </div>
                         </div>   
                     </div>
@@ -114,7 +114,7 @@
                                     Made with Italian Sauce, Chicken, and organice vegetables.
                                 </p>
                                 <br>
-                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                                <a href="order.html" class="order-button btn">Order Now</a>
                             </div>
                         </div>
                         <div class="food-menu-box">
@@ -129,7 +129,7 @@
                                     Made with Italian Sauce, Chicken, and organice vegetables.
                                 </p>
                                 <br>
-                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                                <a href="order.html" class="order-button btn">Order Now</a>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                                     Made with Italian Sauce, Chicken, and organice vegetables.
                                 </p>
                                 <br>
-                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                                <a href="order.html" class="order-button btn">Order Now</a>
                             </div>
                         </div>
                 
@@ -162,7 +162,7 @@
                                     Made with Italian Sauce, Chicken, and organice vegetables.
                                 </p>
                                 <br>
-                                <a href="order.html" class="btn" style="background-color:#181b1e; color:white;">Order Now</a>
+                                <a href="order.html" class="order-button btn">Order Now</a>
                             </div>
                         </div>
                     </div>
@@ -172,8 +172,85 @@
                 </p>
             </div>
         </main>
-        <footer>
-            
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #181b1e">
+            <div class="container p-4 pb-0">
+                <section class="">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Black and White Restaurant</h6>
+                            <p>
+                                Welcome to Black & White Bistro
+                                Where timeless elegance meets contemporary flavor...
+                            </p>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none" />
+    
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                            <p>
+                                <a class="text-white">Some Text</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Some Text</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Some Text</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Some Text</a>
+                            </p>
+                        </div>
+
+                        <hr class="w-100 clearfix d-md-none" />
+                        <hr class="w-100 clearfix d-md-none" />
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                            <p><i class="fas fa-home mr-3"></i> New York, USA </p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        </div>
+
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook m-2"></i>
+                            </a>
+
+                            <!-- Twitter -->
+                            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-twitter m-2"></i>
+                            </a>
+
+                            <!-- Google -->
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-google m-2"></i>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram m-2"></i>
+                            </a>
+
+                            <!-- TikTok -->
+                            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-tiktok m-2"></i>
+                            </a>
+
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-youtube m-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> © 2024:
+                <a class="text-white" href="https://mdbootstrap.com/"> blackandwhite.com </a>
+            </div>
         </footer>
         
 
