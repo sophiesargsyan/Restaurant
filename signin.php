@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2>Sign In</h2>
             </div>
             <div class="card-body">
+                
                 <!-- Error message -->
                 <?php if (isset($error)) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
 
@@ -62,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="card-footer text-center">
                 <p><a href="forgot-password.html">Forgot your password?</a></p>
-                <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                <p>Don't have an account? <a href="signup.php">Sign up here</a></p>
             </div>    
         </div>
         
