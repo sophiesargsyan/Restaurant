@@ -14,6 +14,7 @@
         <link rel="icon" href="images/cropped_logo.png" type="image/x-icon">
     </head>
     <body>
+        <!-- Header -->
         <header>
             <div class="container">
                 <div class="navbar d-flex">
@@ -35,7 +36,44 @@
             </div>
         </header>
         <main>
+            <div class="food-search">
+                <div class="container">
+                    <h2 class="text-center text-white">Confirm your order:</h2>
+                    <form action="#" class="order">
+                        <fieldset>
+                            <legend class="w-auto" style="color:white;">Selected Food</legend>
+
+                            <div class="food-menu-img">
+                                <img src="images/food-2.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                            </div>
             
+                            <div class="food-menu-desc" style="color:white;">
+                                <h3>Fried Chicken Wings</h3>
+                                <p class="food-price">$2.3</p>
+                                <div class="order-label">Quantity</div>
+                                <input type="number" name="qty" class="input-responsive" value="1" required>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset style="color:white;">
+                            <legend class="w-auto" style="color:white;">Delivery Details</legend>
+                            <div class="order-label">Full Name:</div>
+                            <input type="text" name="full-name" placeholder="Enter your full name" class="input-responsive" required>
+
+                            <div class="order-label">Phone Number:</div>
+                            <input type="tel" name="contact" placeholder="+374 xxxxxxxx" class="input-responsive" required>
+
+                            <div class="order-label">Email:</div>
+                            <input type="email" name="email" placeholder="forexample@gmail.com" class="input-responsive" required>
+
+                            <div class="order-label">Address:</div>
+                            <textarea name="address" rows="5" placeholder="Street, City, Country" class="input-responsive" required></textarea>
+
+                            <input type="submit" name="submit" value="Confirm Order" class="btn" style="background-color:white; color:black;">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </main>
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #181b1e">

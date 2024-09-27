@@ -118,6 +118,58 @@ body {
     color:#181b1e;
 }
 
+.order{
+    width: 50%;
+    margin: 0 auto;
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    margin-top: 3%;
+    padding: 0;
+    justify-content: center;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.page-item.active .page-link {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
