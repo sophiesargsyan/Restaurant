@@ -10,10 +10,46 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     if($password != $repeatPassword){
         echo "Passwords don't match!";
-        exit();
     }
 }
 
+//Validation
+function isNameValid($name) {
+    return preg_match("/^[a-zA-Z]+$/", $name);
+}
+
+function isEmailValid($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+function isPhoneValid($phone) {
+    return preg_match("/^(\+374|0)[0-9]{8}$/", $phone);
+}
+
+function isPasswordValid($password) {
+    return strlen($password) >= 8;
+}
+
+
+if (!isNameValid($firstname) || !isNameValid($lastname)) {
+    echo "First and last names must contain only letters!";
+    exit();
+}
+
+if (!isEmailValid($email)) {
+    echo "Invalid email format!";
+    exit();
+}
+
+if (!isPhoneValid($phone)) {
+    echo "Invalid phone number!";
+    exit();
+}
+
+if (!isPasswordValid($password)) {
+    echo "Password must be at least 8 characters long!";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
