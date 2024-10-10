@@ -1,48 +1,3 @@
-<?php 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $address = $_POST['address'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $repeat_password = $_POST['repeat_password'];
-
-    if (empty($firstname) || empty($lastname) || empty($address) || empty($phone) || empty($email) || empty($password) || empty($repeat_password)) {
-        $error = "All fields are required!";
-    } elseif ($password !== $repeat_password) {
-        $error = "Passwords don't match!";
-    } else {
-        $file = fopen("users_data.txt", "r");
-        $exists = false;
-        while (($line = fgets($file)) !== false) {
-            $data = explode(",", trim($line));
-            if ($data[4] === $email) { 
-                $exists = true;
-                break;
-            }
-        }
-        fclose($file);
-
-        if ($exists) {
-            $error = "Account with this email already exists!";
-        } else {
-            $data = $firstname . "," . $lastname . "," . $address . "," . $phone . "," . $email . "," . password_hash($password, PASSWORD_DEFAULT) . "\n";
-            
-            $file = fopen("users_data.txt", "a");
-            fwrite($file, $data);
-            fclose($file);
-            
-            echo "Registration successful";
-            header("Location: index.php");
-            exit();
-        }
-    }
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -60,10 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2>Sign Up</h2>
             </div>
             <div class="card-body">
-
-                <!-- Error message -->
-                <?php if (isset($error)) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
-
                 <form action="signup.php" method="POST">
                     <div class="mb-3">
                         <label for="firstname" class="form-label">First Name:</label>
@@ -100,24 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>Already have an account? <a href="signin.php">Sign in here</a></p>
             </div>    
         </div>
-
-        <!-- Validation -->
-        <script>
-            document.querySelector('form').addEventListener('submit', function(event) {
-                const firstname = document.getElementById('firstname').value;
-                const lastname = document.getElementById('lastname').value;
-                const address = document.getElementById('address').value;
-                const phone = document.getElementById('phone').value;
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const repeatPassword = document.getElementById('repeat_password').value;
-
-                if (!firstname || !lastname || !address || !phone || !email || !password || !repeatPassword) {
-                    alert('All fields are required!');
-                    event.preventDefault();
-                }
-            });
-        </script>
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
