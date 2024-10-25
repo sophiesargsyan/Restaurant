@@ -2,7 +2,6 @@
 ini_set('display_errors', '1');
 error_reporting(E_ALL);
 
-
 $errors = [];
 
 function isNameValid($name) {
@@ -64,34 +63,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
             };
         }
-
-        // if (!file_exists($dataFolder)) {
-        //     if (!mkdir($dataFolder, 0777)) {
-        //         echo "Error create db directory";
-        //         exit();
-        //     }
-        // }
         
         if (file_put_contents( $dataFolder . DIRECTORY_SEPARATOR . $filePath, $userData, FILE_APPEND | LOCK_EX) === false) {
             echo "Error save data";
             exit();
         } else {
-            echo "Success!";
+            header("Location: index.php");
             exit();
         }
-        
-
-
-
-
-
-
-        // if (file_put_contents($filePath, $userData, FILE_APPEND | LOCK_EX) === false) {
-        //     $errors[] = "Error saving data. Please try again.";
-        // } else {
-        //     header("Location: index.php");
-        //     exit();
-        // }
     }
 }
 ?>
@@ -103,15 +82,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Sign Up | Black and White</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/cropped_logo.png" type="image/x-icon">
 </head>
 <body>
+    
     <div class="card">
         <div class="card-header text-center">
-            <h2>Sign Up</h2>
+            <h2>Create your account!</h2>
         </div>
         <div class="card-body">
             <?php if (!empty($errors)): ?>
