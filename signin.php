@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', '1');
+error_reporting(E_ALL);
+
 $errors = [];
 $success = false;
 
@@ -9,12 +12,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($email) || empty($password)) {
         $errors[] = "Email and password are required.";
     } else {
-        if (file_exists('user-data.txt')) {
-            $fileContent = file_get_contents('user-data.txt');
+        $filePath = 'db/user-data.txt'; 
+
+        if (file_exists($filePath)) {
+            $fileContent = file_get_contents($filePath);
             $users = explode("------------------------\n", $fileContent);
             $userFound = false;
 
             foreach ($users as $user) {
+                // Check for the email
                 if (strpos($user, "Email: " . $email . "\n") !== false) {
                     preg_match("/Password: (.*)\n/", $user, $matches);
                     $storedPassword = $matches[1] ?? '';
@@ -39,7 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($success) {
-        echo "<div class='alert alert-success'>Sign-in successful!</div>";
+        header("Location: index.php");
+        exit();
     }
 }
 ?>

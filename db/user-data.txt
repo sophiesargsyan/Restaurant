@@ -12,3 +12,10 @@ Phone: +1 (562) 761-8156
 Email: rikuxepojy@mailinator.com
 Password: $2y$10$ZcZLljRVl55dIHu9Iu4CmuMFg4szTxfL8bfsv198u0umnV2S/EwYO
 ------------------------
+First Name: Sophie
+Last Name: Sargsyan
+Address: Adipisci proident m
+Phone: +1 (166) 417-4622
+Email: sophieesargsyan@gmail.com
+Password: $2y$10$Igq4PbbabfW87EF4EnYtN.Jo/7AsxAFyVt5qqBKYqamIwAnHg/dLS
+------------------------
