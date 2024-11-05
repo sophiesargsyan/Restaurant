@@ -10,6 +10,7 @@
     <link rel="icon" href="images/cropped_logo.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
             <div class="navbar d-flex">
@@ -64,7 +65,7 @@
         <!-- Order Menu Section -->
         <div class="food-menu">
             <div class="container">
-                <h2 class="text-center">Food Menu</h2>
+                <h2 class="text-center m-3">Today's Recommendations</h2>
                 <div class="d-flex flex-wrap justify-content-around">
                     <div class="food-menu-box">
                         <div class="food-menu-img">
@@ -76,7 +77,7 @@
                             <p class="food-detail">
                                 Made with Italian Sauce, Chicken, and organic vegetables.
                             </p>
-                            <a href="order.html" class="order-button btn">Order Now</a>
+                            <a href="order.php" class="order-button btn">Order Now</a>
                         </div>
                     </div>
                     <div class="food-menu-box">
@@ -89,12 +90,69 @@
                             <p class="food-detail">
                                 Made with Italian Sauce, Chicken, and organic vegetables.
                             </p>
-                            <a href="order.html" class="order-button btn">Order Now</a>
+                            <a href="order.php" class="order-button btn">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-around">
+                    <div class="food-menu-box">
+                        <div class="food-menu-img">
+                            <img src="images/food-3.jpg" alt="Fish Salad" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Chicken Kottu</h4>
+                            <p class="food-price">$2.3</p>
+                            <p class="food-detail">
+                                Made with Italian Sauce, Chicken, and organic vegetables.
+                            </p>
+                            <a href="order.php" class="order-button btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="food-menu-box">
+                        <div class="food-menu-img">
+                            <img src="images/food-4.jpg" alt="Fried Chicken Wings" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Ticka Massala</h4>
+                            <p class="food-price">$2.3</p>
+                            <p class="food-detail">
+                                Made with Italian Sauce, Chicken, and organic vegetables.
+                            </p>
+                            <a href="order.php" class="order-button btn">Order Now</a>
                         </div>
                     </div>
                     <!-- Additional food items here -->
                 </div>
-                <p class="text-center">
+                <div class="d-flex flex-wrap justify-content-around">
+                    <div class="food-menu-box">
+                        <div class="food-menu-img">
+                            <img src="images/food-5.jpg" alt="Fish Salad" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Greek Fish Salad</h4>
+                            <p class="food-price">$2.3</p>
+                            <p class="food-detail">
+                                Made with Italian Sauce, Chicken, and organic vegetables.
+                            </p>
+                            <a href="order.php" class="order-button btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="food-menu-box">
+                        <div class="food-menu-img">
+                            <img src="images/food-6.jpg" alt="Fried Chicken Wings" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Fried Chicken Wings</h4>
+                            <p class="food-price">$2.3</p>
+                            <p class="food-detail">
+                                Made with Italian Sauce, Chicken, and organic vegetables.
+                            </p>
+                            <a href="order.php" class="order-button btn">Order Now</a>
+                        </div>
+                    </div>
+                    <!-- Additional food items here -->
+                </div>
+                <p class="text-center m-4">
                     <a href="#" class="btn btn-dark">See All Foods</a>
                 </p>
             </div>

@@ -19,3 +19,10 @@ Phone: +1 (166) 417-4622
 Email: sophieesargsyan@gmail.com
 Password: $2y$10$Igq4PbbabfW87EF4EnYtN.Jo/7AsxAFyVt5qqBKYqamIwAnHg/dLS
 ------------------------
+First Name: Ulla
+Last Name: Patrick
+Address: Totam est lorem dolo
+Phone: +1 (713) 272-2834
+Email: xapote@mailinator.com
+Password: $2y$10$xx9Bh0qiHl8K9BAkVU0kQ.08tDGdpIuA9jSlMHQTh1xowRPXbDuTq
+------------------------

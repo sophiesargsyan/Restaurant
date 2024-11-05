@@ -42,11 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Home | Black and White</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/order.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/cropped_logo.png" type="image/x-icon">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
         <div class="container">
             <div class="navbar d-flex">
@@ -70,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main>
         <div class="food-search">
             <div class="container">
-                <h2 class="text-center text-white">Confirm your order:</h2>
+                <h2 class="text-center">Confirm Your Order</h2>
                 <?php if (isset($successMessage)): ?>
                     <div class="alert alert-success text-center"><?php echo $successMessage; ?></div>
                 <?php elseif (isset($errorMessage)): ?>
@@ -78,51 +79,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endif; ?>
                 <form action="order.php" method="POST" class="order">
                     <fieldset>
-                        <legend class="w-auto" style="color:white;">Selected Food</legend>
+                        <legend>Selected Food</legend>
                         <div class="food-menu-img">
-                            <img src="images/food-2.jpg" alt="Fried Chicken Wings" class="img-responsive img-curve">
+                            <img src="images/food-2.jpg" alt="Fried Chicken Wings">
                         </div>
-                        <div class="food-menu-desc" style="color:white;">
+                        <div class="food-menu-desc">
                             <h3>Fried Chicken Wings</h3>
                             <p class="food-price">$2.3</p>
-                            <div class="order-label">Quantity</div>
+                            <label class="order-label">Quantity</label>
                             <input type="number" name="qty" class="input-responsive" value="1" required>
                         </div>
                     </fieldset>
-                    <fieldset style="color:white;">
-                        <legend class="w-auto" style="color:white;">Delivery Details</legend>
-                        <div class="order-label">Full Name:</div>
+                    <fieldset>
+                        <legend>Delivery Details</legend>
+                        <label class="order-label">Full Name:</label>
                         <input type="text" name="full-name" placeholder="Enter your full name" class="input-responsive" required>
-                        <div class="order-label">Phone Number:</div>
+                        <label class="order-label">Phone Number:</label>
                         <input type="tel" name="contact" placeholder="+374 xxxxxxxx" class="input-responsive" required>
-                        <div class="order-label">Email:</div>
+                        <label class="order-label">Email:</label>
                         <input type="email" name="email" placeholder="forexample@gmail.com" class="input-responsive" required>
-                        <div class="order-label">Address:</div>
+                        <label class="order-label">Address:</label>
                         <textarea name="address" rows="5" placeholder="Street, City, Country" class="input-responsive" required></textarea>
-                        <input type="submit" name="submit" value="Confirm Order" class="btn" style="background-color:white; color:black;">
+                        <input type="submit" name="submit" value="Confirm Order" class="btn">
                     </fieldset>
                 </form>
             </div>
         </div>
     </main>
-    <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #181b1e">
-        <div class="container p-4 pb-0">
+    <!-- Footer Section -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #181b1e;">
+        <div class="container p-4">
             <section class="">
                 <div class="row">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Black and White Restaurant</h6>
-                        <p>
-                            Welcome to Black & White Bistro
-                            Where timeless elegance meets contemporary flavor...
-                        </p>
+                        <p>Welcome to Black & White Bistro, where timeless elegance meets contemporary flavor...</p>
                     </div>
-                    <!-- Footer content omitted for brevity -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                        <p><a href="#" class="text-white">Some Text</a></p>
+                        <p><a href="#" class="text-white">Some Text</a></p>
+                        <p><a href="#" class="text-white">Some Text</a></p>
+                        <p><a href="#" class="text-white">Some Text</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p><i class="fas fa-home mr-3"></i> New York, USA</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> +01 234 567 88</p>
+                        <p><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Follow Us</h6>
+                        <a href="https://www.facebook.com" class="text-white m-2" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.twitter.com" class="text-white m-2" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.google.com" class="text-white m-2" target="_blank"><i class="fab fa-google"></i></a>
+                        <a href="https://www.instagram.com" class="text-white m-2" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com" class="text-white m-2" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com" class="text-white m-2" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </section>
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> © 2024:
-            <a class="text-white" href="index.php"> blackandwhite.com </a>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024: <a href="index.php" class="text-white">blackandwhite.com</a>
         </div>
     </footer>
     <!-- Bootstrap JS -->

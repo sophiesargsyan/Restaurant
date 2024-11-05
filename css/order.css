@@ -1,0 +1,93 @@
+/* Main Section Styling */
+.food-search {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.food-search .container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.food-search h2 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+}
+
+.food-menu-img img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.food-menu-img img:hover {
+    transform: scale(1.05);
+}
+
+.food-menu-desc {
+    color: #f0f0f0;
+    padding: 10px;
+}
+
+.food-menu-desc h3 {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.food-price {
+    font-size: 1.5rem;
+    color: #ff6347; 
+    font-weight: bold;
+}
+
+.order-label {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.input-responsive {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.input-responsive:focus {
+    background-color: #444;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff6347;
+    color: white;
+}
+
+.alert {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
