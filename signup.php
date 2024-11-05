@@ -55,17 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userData .= "------------------------\n";
         
         $dataFolder = 'db';
-        $filePath = 'user-data.txt';
-        
-        if (!is_writable($dataFolder)) {
-            if (!chmod($dataFolder, 0777)) {
-                echo "Error";
-                exit();
-            };
-        }
-        
-        if (file_put_contents( $dataFolder . DIRECTORY_SEPARATOR . $filePath, $userData, FILE_APPEND | LOCK_EX) === false) {
-            echo "Error save data";
+        $filePath = $dataFolder . DIRECTORY_SEPARATOR . 'user-data.txt';
+
+        if (file_put_contents($filePath, $userData, FILE_APPEND | LOCK_EX) === false) {
+            echo "Error saving data";
             exit();
         } else {
             header("Location: index.php");

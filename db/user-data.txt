@@ -1,0 +1,14 @@
+First Name: Eleanor
+Last Name: Holcomb
+Address: Voluptatum recusanda
+Phone: +1 (541) 278-5754
+Email: vujydyh@mailinator.com
+Password: $2y$10$yaIGtGp86bqcLJgGSTGunuqbV5wo6msTiv9I93BI9.Z2FF.aHX7Rq
+------------------------
+First Name: Lucius
+Last Name: Roberson
+Address: Provident sit face
+Phone: +1 (562) 761-8156
+Email: rikuxepojy@mailinator.com
+Password: $2y$10$ZcZLljRVl55dIHu9Iu4CmuMFg4szTxfL8bfsv198u0umnV2S/EwYO
+------------------------
