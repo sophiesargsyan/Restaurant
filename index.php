@@ -21,11 +21,11 @@
                 </div>
                 <div class="navbar-item">
                     <ul class="menu d-flex justify-content-between">
-                        <li class="navbar-list-item"><a href="#">Home</a></li>
-                        <li class="navbar-list-item"><a href="#">Categories</a></li>
-                        <li class="navbar-list-item"><a href="#">Menu</a></li>
-                        <li class="navbar-list-item"><a href="#">Contact</a></li>
-                        <li class="navbar-list-item"><a href="#">About Us</a></li>
+                        <li class="navbar-list-item"><a href="index.php">Home</a></li>
+                        <li class="navbar-list-item"><a href="categories.php">Categories</a></li>
+                        <li class="navbar-list-item"><a href="menu.php">Menu</a></li>
+                        <li class="navbar-list-item"><a href="contact.php">Contact</a></li>
+                        <li class="navbar-list-item"><a href="about-us.php">About Us</a></li>
                     </ul>
                 </div>
             </div>

@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $userFound = false;
 
             foreach ($users as $user) {
-                // Check for the email
                 if (strpos($user, "Email: " . $email . "\n") !== false) {
                     preg_match("/Password: (.*)\n/", $user, $matches);
                     $storedPassword = $matches[1] ?? '';

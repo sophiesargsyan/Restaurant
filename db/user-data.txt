@@ -26,3 +26,17 @@ Phone: +1 (713) 272-2834
 Email: xapote@mailinator.com
 Password: $2y$10$xx9Bh0qiHl8K9BAkVU0kQ.08tDGdpIuA9jSlMHQTh1xowRPXbDuTq
 ------------------------
+First Name: Cyrus
+Last Name: Clay
+Address: Dolores proident to
+Phone: +1 (451) 318-7141
+Email: gedasija@mailinator.com
+Password: $2y$10$zyaQL8FjxZlk90ozSPSWheOmPN6yFgp33eRojF4lI1duoPXvSpWpS
+------------------------
+First Name: Xavier
+Last Name: Bray
+Address: Aut odio voluptate s
+Phone: +1 (753) 733-6538
+Email: gywoj@mailinator.com
+Password: $2y$10$2N1hJT3Ir8GKr5MI2hZkL.sBV2ohwzmZdbgWNd7XSFUOVLd3bU7Ri
+------------------------
