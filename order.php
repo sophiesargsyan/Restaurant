@@ -1,15 +1,26 @@
 <?php
+ini_set('display_errors', '1');
+error_reporting(E_ALL);
+
+$errors = [];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['full-name'], $_POST['contact'], $_POST['email'], $_POST['address'], $_POST['qty'])) {
-        $fullName = filter_var(trim($_POST['full-name']), FILTER_SANITIZE_STRING);
-        $contact = filter_var(trim($_POST['contact']), FILTER_SANITIZE_STRING);
+        // Updated sanitization methods
+        $fullName = filter_var(trim($_POST['full-name']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $contact = filter_var(trim($_POST['contact']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-        $address = filter_var(trim($_POST['address']), FILTER_SANITIZE_STRING);
+        $address = filter_var(trim($_POST['address']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $quantity = filter_var(trim($_POST['qty']), FILTER_SANITIZE_NUMBER_INT);
         $foodItem = 'Fried Chicken Wings'; 
 
+        // Define the price of the food item
+        $price = 10;  // Example price, you can change this value
+
+        // Calculate the total cost
         $totalCost = $quantity * $price;
 
+        // Prepare the order data
         $orderData = [
             'fullName' => $fullName,
             'contact' => $contact,
@@ -21,19 +32,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'orderDate' => date('Y-m-d H:i:s')
         ];
 
+        // Specify the file path
         $filePath = 'order-data.php';
-        $orderEntry = "<?php\n\$orders[] = " . var_export($orderData, true) . ";\n?>\n";
 
-        if (file_put_contents($filePath, $orderEntry, FILE_APPEND | LOCK_EX)) {
-            $successMessage = "Your order has been successfully placed!";
+        // Check if the file is writable before attempting to write
+        if (is_writable($filePath)) {
+            $orderEntry = "<?php\n\$orders[] = " . var_export($orderData, true) . ";\n?>\n";
+            
+            if (file_put_contents($filePath, $orderEntry, FILE_APPEND | LOCK_EX)) {
+                $successMessage = "Your order has been successfully placed!";
+            } else {
+                $errorMessage = "Failed to save your order. Please try again.";
+            }
         } else {
-            $errorMessage = "Failed to save your order. Please try again.";
+            $errorMessage = "The file is not writable. Please check the file permissions.";
         }
     } else {
         $errorMessage = "Please fill in all required fields.";
     }
 }
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endif; ?>
                 <form action="order.php" method="POST" class="order">
                     <fieldset>
-                        <legend>Selected Food</legend>
+                        <legend class="my-4">Selected Food</legend>
                         <div class="food-menu-img">
                             <img src="images/food-2.jpg" alt="Fried Chicken Wings">
                         </div>
@@ -91,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </fieldset>
                     <fieldset>
-                        <legend>Delivery Details</legend>
+                        <legend class="my-4">Delivery Details</legend>
                         <label class="order-label">Full Name:</label>
                         <input type="text" name="full-name" placeholder="Enter your full name" class="input-responsive" required>
                         <label class="order-label">Phone Number:</label>
