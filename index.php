@@ -150,7 +150,6 @@
                             <a href="order.php" class="order-button btn">Order Now</a>
                         </div>
                     </div>
-                    <!-- Additional food items here -->
                 </div>
                 <p class="text-center m-4">
                     <a href="#" class="btn btn-dark">See All Foods</a>
