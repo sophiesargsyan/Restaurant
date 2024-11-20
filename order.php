@@ -14,11 +14,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $address = filter_var(trim($_POST['address']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $quantity = filter_var(trim($_POST['qty']), FILTER_VALIDATE_INT);
 
+        if (!preg_match("/^[a-zA-Z\s]+$/", $fullName)) {
+            $errorMessage = "Full name should only contain letters and spaces.";
+        }
+
+        if (!preg_match("/^\+374\d{8}$/", $contact)) {
+            $errorMessage = "Phone number must follow the format: +374xxxxxxxx.";
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errorMessage = "Please enter a valid email address.";
+        }
+
         if ($quantity && $quantity > 0) {
             $foodItem = 'Fried Chicken Wings';
             $price = 10; 
             $totalCost = $quantity * $price;
-
             $orderData = [
                 'fullName' => $fullName,
                 'contact' => $contact,
@@ -30,18 +41,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'orderDate' => date('Y-m-d H:i:s')
             ];
 
-            $filePath = __DIR__ . '/db/order-data.txt';
+            $dataFolder = 'db';
+            $filePath = $dataFolder . DIRECTORY_SEPARATOR . 'order-data.json';
 
-            if (is_writable($filePath)) {
-                $orderEntry = json_encode($orderData) . PHP_EOL; 
-
-                if (file_put_contents($filePath, $orderEntry, FILE_APPEND | LOCK_EX)) {
-                    $successMessage = "Your order has been successfully placed!";
-                } else {
-                    $errorMessage = "Failed to save your order. Please try again.";
+            if (file_exists($filePath)) {
+                $existingData = json_decode(file_get_contents($filePath), true);
+                if ($existingData === null) {
+                    $existingData = [];
                 }
             } else {
-                $errorMessage = "The order file is not writable. Please check the file permissions.";
+                $existingData = [];
+            }
+
+            $existingData[] = $orderData;
+
+            if (file_put_contents($filePath, json_encode($existingData, JSON_PRETTY_PRINT)) !== false) {
+                $successMessage = "Your order has been successfully placed!";
+            } else {
+                $errorMessage = "Failed to save your order. Please try again.";
             }
         } else {
             $errorMessage = "Please enter a valid quantity.";
@@ -51,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

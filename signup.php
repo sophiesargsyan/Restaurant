@@ -46,18 +46,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
-        $userData = "First Name: " . htmlspecialchars($firstname) . "\n";
-        $userData .= "Last Name: " . htmlspecialchars($lastname) . "\n";
-        $userData .= "Address: " . htmlspecialchars($address) . "\n";
-        $userData .= "Phone: " . htmlspecialchars($phone) . "\n";
-        $userData .= "Email: " . htmlspecialchars($email) . "\n";
-        $userData .= "Password: " . password_hash($password, PASSWORD_DEFAULT) . "\n"; 
-        $userData .= "------------------------\n";
-        
-        $dataFolder = 'db';
-        $filePath = $dataFolder . DIRECTORY_SEPARATOR . 'user-data.txt';
+        $userData = [
+            'firstname' => htmlspecialchars($firstname),
+            'lastname' => htmlspecialchars($lastname),
+            'address' => htmlspecialchars($address),
+            'phone' => htmlspecialchars($phone),
+            'email' => htmlspecialchars($email),
+            'password' => password_hash($password, PASSWORD_DEFAULT),
+            'date_created' => date('Y-m-d H:i:s')
+        ];
 
-        if (file_put_contents($filePath, $userData, FILE_APPEND | LOCK_EX) === false) {
+        $dataFolder = 'db';
+        $filePath = $dataFolder . DIRECTORY_SEPARATOR . 'user-data.json';
+
+        if (file_exists($filePath)) {
+            $existingData = json_decode(file_get_contents($filePath), true);
+            if ($existingData === null) {
+                $existingData = [];
+            }
+        } else {
+            $existingData = [];
+        }
+
+        $existingData[] = $userData;
+
+        if (file_put_contents($filePath, json_encode($existingData, JSON_PRETTY_PRINT)) === false) {
             echo "Error saving data";
             exit();
         } else {
@@ -67,8 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
