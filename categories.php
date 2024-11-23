@@ -32,7 +32,109 @@
         </div>
     </header>
     <main>
-        
+    <section class="categories">
+            <div class="container">
+                <h2 class="text-center">Explore Categories</h2>
+
+                <!-- Cold Appetizers -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-1.jpg" alt="Cold Appetizers" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Cold Appetizers</h3>
+                    </div>
+                </a>
+
+                <!-- Hot Appetizers -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-2.jpg" alt="Hot Appetizers" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Hot Appetizers</h3>
+                    </div>
+                </a>
+
+                <!-- Salads -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-3.jpg" alt="Salads" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Salads</h3>
+                    </div>
+                </a>
+
+                <!-- Main Courses -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-4.jpg" alt="Main Courses" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Main Courses</h3>
+                    </div>
+                </a>
+
+                <!-- Grilled Dishes -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-5.jpg" alt="Grilled Dishes" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Grilled Dishes</h3>
+                    </div>
+                </a>
+
+                <!-- Pizzas -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-6.jpg" alt="Pizzas" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Pizzas</h3>
+                    </div>
+                </a>
+
+                <!-- Pasta & Risotto -->
+                <a href="menu.php">
+                <div class="box-3 float-container">
+                    <img src="images/food-1.jpg" alt="Pasta & Risotto" class="img-responsive img-curve">
+                    <h3 class="float-text text-white">Pasta & Risotto</h3>
+                </div>
+                </a>
+
+                <!-- Burgers & Sandwiches -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-2.jpg" alt="Burgers & Sandwiches" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Burgers & Sandwiches</h3>
+                    </div>
+                </a>
+
+                <!-- Traditional Cuisine -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-3.jpg" alt="Traditional Cuisine" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Traditional Cuisine</h3>
+                    </div>
+                </a>
+
+                <!-- Seafood -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-4.jpg" alt="Seafood" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Seafood</h3>
+                    </div>
+                </a>
+
+                <!-- Desserts -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-5.jpg" alt="Desserts" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Desserts</h3>
+                    </div>
+                </a>
+
+                <!-- Drinks -->
+                <a href="menu.php">
+                    <div class="box-3 float-container">
+                        <img src="images/food-6.jpg" alt="Drinks" class="img-responsive img-curve">
+                        <h3 class="float-text text-white">Drinks</h3>
+                    </div>
+                </a>
+
+                <div class="clearfix"></div>
+            </div>
+        </section>  
     </main>
     <!-- Footer Section -->
     <footer class="text-center text-lg-start text-white" style="background-color: #181b1e;">
