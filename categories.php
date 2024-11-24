@@ -71,7 +71,7 @@
                 <!-- Grilled Dishes -->
                 <a href="menu.php">
                     <div class="box-3 float-container">
-                        <img src="images/food-5.jpg" alt="Grilled Dishes" class="img-responsive img-curve">
+                        <img src="images/food-1.jpg" alt="Grilled Dishes" class="img-responsive img-curve">
                         <h3 class="float-text text-white">Grilled Dishes</h3>
                     </div>
                 </a>
@@ -79,7 +79,7 @@
                 <!-- Pizzas -->
                 <a href="menu.php">
                     <div class="box-3 float-container">
-                        <img src="images/food-6.jpg" alt="Pizzas" class="img-responsive img-curve">
+                        <img src="images/food-2.jpg" alt="Pizzas" class="img-responsive img-curve">
                         <h3 class="float-text text-white">Pizzas</h3>
                     </div>
                 </a>
@@ -87,7 +87,7 @@
                 <!-- Pasta & Risotto -->
                 <a href="menu.php">
                 <div class="box-3 float-container">
-                    <img src="images/food-1.jpg" alt="Pasta & Risotto" class="img-responsive img-curve">
+                    <img src="images/food-3.jpg" alt="Pasta & Risotto" class="img-responsive img-curve">
                     <h3 class="float-text text-white">Pasta & Risotto</h3>
                 </div>
                 </a>
@@ -95,7 +95,7 @@
                 <!-- Burgers & Sandwiches -->
                 <a href="menu.php">
                     <div class="box-3 float-container">
-                        <img src="images/food-2.jpg" alt="Burgers & Sandwiches" class="img-responsive img-curve">
+                        <img src="images/food-4.jpg" alt="Burgers & Sandwiches" class="img-responsive img-curve">
                         <h3 class="float-text text-white">Burgers & Sandwiches</h3>
                     </div>
                 </a>
@@ -103,32 +103,8 @@
                 <!-- Traditional Cuisine -->
                 <a href="menu.php">
                     <div class="box-3 float-container">
-                        <img src="images/food-3.jpg" alt="Traditional Cuisine" class="img-responsive img-curve">
+                        <img src="images/food-1.jpg" alt="Traditional Cuisine" class="img-responsive img-curve">
                         <h3 class="float-text text-white">Traditional Cuisine</h3>
-                    </div>
-                </a>
-
-                <!-- Seafood -->
-                <a href="menu.php">
-                    <div class="box-3 float-container">
-                        <img src="images/food-4.jpg" alt="Seafood" class="img-responsive img-curve">
-                        <h3 class="float-text text-white">Seafood</h3>
-                    </div>
-                </a>
-
-                <!-- Desserts -->
-                <a href="menu.php">
-                    <div class="box-3 float-container">
-                        <img src="images/food-5.jpg" alt="Desserts" class="img-responsive img-curve">
-                        <h3 class="float-text text-white">Desserts</h3>
-                    </div>
-                </a>
-
-                <!-- Drinks -->
-                <a href="menu.php">
-                    <div class="box-3 float-container">
-                        <img src="images/food-6.jpg" alt="Drinks" class="img-responsive img-curve">
-                        <h3 class="float-text text-white">Drinks</h3>
                     </div>
                 </a>
 
