@@ -1,3 +1,26 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
+
+    if ($email && !empty($name) && !empty($subject) && !empty($message)) {
+        $to = "info@blackandwhite.com";
+        $headers = "From: $email";
+        $body = "Name: $name\nEmail: $email\nSubject: $subject\n\nMessage:\n$message";
+
+        if (mail($to, $subject, $body, $headers)) {
+            echo "Your message has been sent successfully!";
+        } else {
+            echo "Failed to send your message. Please try again.";
+        }
+    } else {
+        echo "Please fill in all fields correctly.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +55,38 @@
         </div>
     </header>
     <main>
-        
+        <section class="contact-form-container py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Get in Touch</h2>
+                <form action="submit_contact.php" method="post" class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
+                        <div class="invalid-feedback">Please enter a subject.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea name="message" id="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+                        <div class="invalid-feedback">Please enter your message.</div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
     <!-- Footer Section -->
     <footer class="text-center text-lg-start text-white" style="background-color: #181b1e;">
