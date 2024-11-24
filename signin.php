@@ -12,24 +12,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($email) || empty($password)) {
         $errors[] = "Email and password are required.";
     } else {
-        $filePath = 'db/user-data.txt'; 
+        $filePath = 'db/user-data.json';
 
         if (file_exists($filePath)) {
             $fileContent = file_get_contents($filePath);
-            $users = explode("------------------------\n", $fileContent);
+            $users = json_decode($fileContent, true);
             $userFound = false;
 
             foreach ($users as $user) {
-                if (strpos($user, "Email: " . $email . "\n") !== false) {
-                    preg_match("/Password: (.*)\n/", $user, $matches);
-                    $storedPassword = $matches[1] ?? '';
-
-                    if (password_verify($password, $storedPassword)) {
+                if ($user['email'] === $email) {
+                    $userFound = true;
+                    if (password_verify($password, $user['password'])) {
                         $success = true;
                         break;
                     } else {
                         $errors[] = "Invalid password.";
-                        $userFound = true;
                         break;
                     }
                 }
