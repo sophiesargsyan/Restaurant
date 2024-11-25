@@ -232,7 +232,10 @@ body {
     object-fit: cover;
 }
 
-
+.our-values-section {
+    background-color: #ececec;
+    color: #000; 
+}
 
 @media (max-width: 600px) {
     .navbar {
@@ -259,6 +262,6 @@ body {
         margin-right: 0%;
     }
 
-    /*Mobile size for Food order part isn't done yet*/
+    /*Mobile size for pages isn't done yet*/
     
 }

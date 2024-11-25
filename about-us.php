@@ -32,8 +32,54 @@
         </div>
     </header>
     <main>
-        
+        <section class="about-us-section">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="font-weight-bold mb-4">About Black & White Restaurant</h2>
+                        <p>
+                            Welcome to Black & White Bistro, where timeless elegance meets modern culinary artistry. 
+                            Our passion for excellence is reflected in every dish we prepare, offering a harmonious blend 
+                            of classic recipes and contemporary flavors. At Black & White, we believe dining is more than 
+                            just eating—it's an experience that creates lasting memories.
+                        </p>
+                        <p>
+                            Our talented chefs use the finest, freshest ingredients to craft a menu that caters to 
+                            diverse palates. Whether you’re looking for a cozy dinner with loved ones or a stylish venue 
+                            for celebrations, Black & White Bistro provides the perfect ambiance for every occasion.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="images/aboutus.avif" alt="About Us Image" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-values-section">
+            <div class="container py-5">
+                <h3 class="text-center font-weight-bold mb-4">Our Values</h3>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                        <h5 class="mb-3">Fresh Ingredients</h5>
+                        <p>We source the freshest, locally-grown ingredients to ensure every bite is as flavorful as it is nutritious.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                        <h5 class="mb-3">Customer First</h5>
+                        <p>Your satisfaction is our top priority. We strive to provide exceptional service with every visit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-heart fa-3x text-danger mb-3"></i>
+                        <h5 class="mb-3">Passion for Flavor</h5>
+                        <p>We pour our heart into every dish, ensuring a culinary experience you’ll love and remember.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <!-- Footer Section -->
     <footer class="text-center text-lg-start text-white" style="background-color: #181b1e;">
         <div class="container p-4">
